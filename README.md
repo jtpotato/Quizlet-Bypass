@@ -1,8 +1,11 @@
 # Quizlet-Bypass
-Hi! This extension requires Firefox, because creating Chrome extensions that are... simply put, not in favour of large corporations is very difficult.
+Hi! This extension requires Firefox, because Google would not approve of anything like this.
 
 Download here:
 https://github.com/jtpotato/Quizlet-Bypass/releases/download/1.0/quizlet_bypass-1.0-an.xpi
+
+## Legal Disclaimer
+This extension is for educational purposes only, we do not condone piracy.
 
 ## For nerds:
 If you're interested, here's how it works.

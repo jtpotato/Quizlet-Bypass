@@ -8,9 +8,12 @@ function getElementByXpath(path) {
 }
 
 function overrideLink(el, path) {
-  el.onclick = () => {
-    const redir = `https://quizlet.com/${quizlet_id}/${path}/embed/`
-    window.open(redir)
+  console.log(el)
+  if (el != null) {
+    el.onclick = () => {
+      const redir = `https://quizlet.com/${quizlet_id}/${path}/embed/`
+      window.open(redir)
+    }
   }
 }
 
@@ -19,26 +22,26 @@ function deferred() {
   console.log("Message recieved")
   
   // Override Links
-  const flashcardsButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[1]")
+  const flashcardsButton = getElementByXpath("//a[text()='Flashcards']").parentElement.parentElement.parentElement.parentElement
   console.log(flashcardsButton)
   overrideLink(flashcardsButton, "flashcards")
 
-  const learnButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[2]")
+  const learnButton = getElementByXpath("//a[text()='Learn']").parentElement.parentElement.parentElement.parentElement
   console.log(learnButton)
   overrideLink(learnButton, "learn")
 
-  const testButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[3]")
+  const testButton = getElementByXpath("//a[text()='Test']").parentElement.parentElement.parentElement.parentElement
   console.log(testButton)
   overrideLink(testButton, "test")
   
-  const matchButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[4]")
+  const matchButton = getElementByXpath("//a[text()='Match']").parentElement.parentElement.parentElement.parentElement
   console.log(matchButton)
   overrideLink(matchButton, "match")
 
-  // Get rid of other annoying things
-  const youreLoggedOut = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div[2]/div/div[2]/div/div/section/div/section/div[2]")
-  console.log(youreLoggedOut)
-  youreLoggedOut.style.display = "none"
+  // Get rid of annoying popup
+  const signInPlease = getElementByXpath("//p[text()='Boost your grades with unlimited access to millions of flashcards, games and more.']").parentElement.parentElement
+  console.log(signInPlease)
+  signInPlease.style.display = "none"
 }
 
 const run = () => {

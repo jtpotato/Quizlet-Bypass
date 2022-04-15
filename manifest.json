@@ -12,5 +12,10 @@
   ],
   "web_accessible_resources": [
     "inject.js"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "quizlet-bypass@jtpotato.github.io"
+    }
+  }
 }

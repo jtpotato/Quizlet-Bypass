@@ -1,0 +1,16 @@
+{
+
+  "manifest_version": 2,
+  "name": "Quizlet Bypass",
+  "version": "1.0",
+  "description": "Attempts to bypass the paywalls on Quizlet.",
+  "content_scripts": [
+    {
+      "matches": ["https://quizlet.com/*"],
+      "js": ["quizlet.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "inject.js"
+  ]
+}

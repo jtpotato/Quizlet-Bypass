@@ -7,8 +7,8 @@ function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
 }
 
-function overrideLink(element, path) {
-  element.onclick = () => {
+function overrideLink(el, path) {
+  el.onclick = () => {
     const redir = `https://quizlet.com/${quizlet_id}/${path}/embed/`
     window.open(redir)
   }

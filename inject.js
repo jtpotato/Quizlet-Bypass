@@ -17,7 +17,7 @@ function overrideLink(element, path) {
 // Create deferred part of program
 function deferred() {
   console.log("Message recieved")
-
+  
   // Override Links
   const flashcardsButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[1]")
   console.log(flashcardsButton)
@@ -30,7 +30,7 @@ function deferred() {
   const testButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[3]")
   console.log(testButton)
   overrideLink(testButton, "test")
-
+  
   const matchButton = getElementByXpath("//html/body/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/div[2]/div[2]/nav/section/ul/li[4]")
   console.log(matchButton)
   overrideLink(matchButton, "match")
@@ -47,4 +47,4 @@ const run = () => {
   }
 }
 
-run()
+setTimeout(run, 1000)

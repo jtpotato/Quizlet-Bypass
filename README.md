@@ -1,5 +1,5 @@
 # Quizlet-Bypass
-Hi! This extension requires Firefox, because Google would not approve of anything like this.
+Hi! This extension requires Firefox, because Google doesn't like extensions that bypass paywalls
 
 Download here:
 https://github.com/jtpotato/Quizlet-Bypass/releases/download/1.4/quizlet_bypass-1.1.4-an+fx.xpi

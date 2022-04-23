@@ -1,7 +1,7 @@
 // Get URL
 let url = window.location.pathname
 const paths = url.split("/")
-const quizlet_id = paths[1]
+const quizlet_id = paths[2]
 
 function getElementByXpath(path) {
   return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
@@ -45,7 +45,7 @@ function deferred() {
 }
 
 const run = () => {
-  if (paths[3] != "embed") {
+  if (paths[4] != "embed") {
     deferred()
   }
 }

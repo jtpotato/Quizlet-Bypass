@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Quizlet Bypass",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Attempts to bypass the paywalls on Quizlet.",
   "content_scripts": [
     {
